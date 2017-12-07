@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FOR LOOP EXPLAINED</title>
+	
+</head>
+<body onload="averageof(amsterdam)">
+   <div id="result"></div>
+
+
+
+   <script>
+		 
+
+		 var amsterdam = [1500, 500, 1800, 1200];
+		 var london = [2300, 900, 1300, 1000];
+		 
+
+		   		function doSomething() {
+		  document.getElementById("result").innerHTML =  "make my day";
+		}
+		function doSomething2() {
+		  var amsterdam = [1500, 500, 1800, 1200];
+		  strResult = "";
+		  for (var i=0; i < amsterdam.length; i++) {
+		    strResult = strResult + amsterdam[i] + " ";
+		  }
+		  document.getElementById("result").innerHTML =  strResult;
+		}
+		function doSomething3() {
+		  var amsterdam = [1500, 500, 1800, 1200];
+		  var sum = 0;
+		  for (var i=0; i < amsterdam.length; i++) {
+		    sum  = sum + amsterdam[i];
+		  }
+		  document.getElementById("result").innerHTML =  sum;
+		}
+
+
+		function doSomething4() {
+			var amsterdam = [1500, 500, 1800, 1200];
+		  var product = amsterdam[0];
+		  for (var i=1; i < amsterdam.length; i++) {
+		    product  = product * amsterdam[i];
+		  }
+		  document.getElementById("result").innerHTML =  product;
+		}
+
+		function pythagoras(a, b) {
+			var c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+			document.getElementById("result").innerHTML =  c;
+		}
+		  
+
+		function doSomething5(x) {
+		  var sum = 0;
+		  for (var i=0; i < x.length; i++) {
+		    sum  = sum + x[i];
+		  }
+		  return sum;
+		}
+
+
+		function averageof(x) {
+			var average = Number(doSomething5(x)) / Number(x.length);
+			console.log(average)
+			return average;
+		}
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+		
+
+   </script>
+</body>
+</html>
+
+

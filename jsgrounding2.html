@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+		// grounding more on arrays 
+
+		var dinosaurs = [];                // create an empty array 
+		dinosaurs[0] = "T-Rex";	             // add first element
+		
+		dinosaurs[1] = "Velociraptor";      // add 2nd element
+		
+		dinosaurs[2] = "Stegosaurus";       // add 3th element
+		
+		dinosaurs[3] = "Diplodocus";       // add 6th element!!!!!
+		printMyArray(dinosaurs);
+
+		function printMyArray(x) {
+			for (var i = 0; i < x.length; i++) {
+				console.log(x[i]);
+				}}
+
+
+		//  2
+
+		// this array definition has been broken into several lines - this is completely fine, if you want it!!!
+		var amsterdam = [
+ 		3,                            // array can have numbers
+ 		"Amsterdam", "Netherland",    // array can have strings, here 2 in a single line
+  		[1500, 1200, 1400, "Euros"] // array can have arrays, that can also be complex
+		];
+
+		printMyArray(amsterdam);
+
+		// 3
+
+		animals = ["Polar Bear", "Monkey", "Cat", "Dog", "Llama"]
+		var lastAnimal = animals.pop();
+		console.log(animals); // ["Polar Bear", "Monkey", "Cat", "Dog"]
+		var newLastAnimal = animals.pop();
+		console.log(animals); 
+		console.log(newLastAnimal)
+
+		// Objects & Built-in Methods based on a condition - if-else & switch a
+
+		var rndnum = (Math.random() * 10);
+
+		console.log(rndnum);
+
+		if (rndnum > 5) {
+			console.log("the number is greater than 5");
+		}
+		else {
+			console.log("the number is less than 5");
+		}
+
+
+		// b
+
+		var date = new Date();
+
+		var hours = date.getHours();
+
+		console.log(hours);
+
+		function greeting () {
+
+			if (hours < 11 && hours >= 5) {
+				console.log("Good Morning");
+			}
+			else if (hours < 16 && hours > 11) {
+				console.log("Good Day");
+			}
+			else {
+				console.log("Good Night");
+			}
+		}
+
+		greeting()
+
+		// c
+
+		var hero = "superman";
+
+		
+		function superhero (x) {
+		switch (x) {
+			case "superman":
+				console.log(x + " is a character of DC Comics");
+				break;
+			case "spiderman": 
+				console.log(x + " is a character of marvel");
+				break;
+			case "hulk":
+				console.log(x + " is a character of DC Comics");
+			default:
+				console.log("unknown");
+		}
+		}
+
+		superhero("superman");
+
+		superhero("spiderman");
+
+		superhero("hulk");
+
+
+		//  3. functions 
+
+
+		function personalInformation (age, name, job) {
+			console.log("Hi I am " + name + " I am " + age + " and I am a future " + job);
+		}
+
+		personalInformation(24, "david", "programmer");
+
+
+		// 2.
+
+
+		function calc(a, b, c, d) {
+			var an = Number(a);
+			var bn = Number(b); 
+			var cn = Number(c); 
+			var dn = Number(d); 
+			console.log( an + bn + cn + dn);
+			console.log( an - bn - cn - dn);
+			console.log( an * bn * cn * dn);
+		}
+
+		calc(1, 3, 4, 8);
+
+
+		// 3.
+
+		var d = new Date();
+		var currentYear = d.getFullYear();
+
+		console.log(currentYear);
+
+		function ageCalc(birthyear) {
+			var result = currentYear - birthyear ; 
+			return result;
+		}
+
+		console.log(ageCalc(1993));
+
+
+
+
+</script>
+</body>
+</html>
